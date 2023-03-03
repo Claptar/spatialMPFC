@@ -210,11 +210,12 @@ sc.pl.pca(adata,
       cax = scatter(
     C:\Users\aleks\anaconda3\envs\scanorama39\lib\site-packages\scanpy\plotting\_tools\scatterplots.py:392: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
       cax = scatter(
-    
 
 
-    
-![png](./figures/output_19_1.png)
+
+
+<img src="./figures/output_19_1.png" width="70%" height="70%" />
+
     
 
 
@@ -353,11 +354,11 @@ sq.pl.nhood_enrichment(adata, cluster_key="cluster", method="average")
 
     Adding `adata.uns['cluster_nhood_enrichment']`
     Finish (0:00:24)
-    
 
 
-    
-![png](./figures/output_28_3.png)
+
+
+<img src="./figures/output_28_3.png" width="50%" height="50%" />
     
 
 
