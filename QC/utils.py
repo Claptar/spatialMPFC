@@ -22,14 +22,15 @@ layer_palette = {'Empty spots': '#1f77b4',
                  'L6b': '#fa9284'}
 
 
-def apply_upper_treshold(adata, column):
+def apply_upper_treshold(adata, column, treshold=None):
     global tresholds
     
     qc_name = 'qc_' + column
     adata.obs[qc_name] = "True"
-    tresh_index = (adata.obs[column] > tresholds[column])
+    treshold = tresholds[column] if treshold is None else treshold
+    tresh_index = (adata.obs[column] > treshold)
     adata.obs.loc[tresh_index, qc_name] = "False"
-    print(f'Трешхолд равняется : {tresholds[column]}')
+    print(f'Трешхолд равняется : {treshold}')
     print(f'Всего образцов не прошедших трешхолд: {tresh_index.sum()}')
     if tresh_index.sum():
         vc = adata.obs.groupby(qc_name)['label'].value_counts()
