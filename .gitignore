@@ -2,5 +2,5 @@
 visium.hcmt 2
 data
 .ipynb_checkpoints
-results
+./results
 tar_data
