@@ -6,3 +6,4 @@ data
 tar_data
 venv
 figures
+*.h5ad
