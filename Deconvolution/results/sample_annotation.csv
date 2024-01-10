@@ -1,0 +1,170 @@
+sample;dataset;individual;region;age;age_range;sex_original;region_broad;chemistry;PMI;sex;Nemo sample name
+5387_BA9;Velmeshev;5387;BA9;12;10-20 years;Male;FC;V2;13;Male;5387_BA9
+5163_BA24;Velmeshev;5163;BA24;14;10-20 years;Male;CC;V2;12;Male;5163_BA24
+5958_BA24;Velmeshev;5958;BA24;22;Adult;Male;CC;V2;24;Male;5958_BA24
+5577_BA9;Velmeshev;5577;BA9;21;Adult;Male;FC;V2;19;Male;5577_BA9
+5958_BA9;Velmeshev;5958;BA9;22;Adult;Male;FC;V2;24;Male;5958_BA9
+5893_PFC;Velmeshev;5893;PFC;19;10-20 years;Male;FC;V2;11;Male;5893_PFC
+5554_BA24;Velmeshev;5554;BA24;13;10-20 years;Female;CC;V2;15;Female;5554_BA24
+5893_BA24;Velmeshev;5893;BA24;19;10-20 years;Male;CC;V2;11;Male;5893_BA24
+4341_BA46;Velmeshev;4341;BA46;13;10-20 years;Male;FC;V2;16;Male;4341_BA46
+5242_BA24;Velmeshev;5242;BA24;15;10-20 years;Male;CC;V2;9;Male;5242_BA24
+5391_BA24;Velmeshev;5391;BA24;8;4-10 years;Male;CC;V2;12;Male;5391_BA24
+4341_BA24;Velmeshev;4341;BA24;13;10-20 years;Male;CC;V2;16;Male;4341_BA24
+5538_PFC;Velmeshev;5538;PFC;19;10-20 years;Female;FC;V2;24;Female;5538_PFC
+5408_PFC;Velmeshev;5408;PFC;6;4-10 years;Male;FC;V2;16;Male;5408_PFC
+5879_PFC;Velmeshev;5879;PFC;15;10-20 years;Male;FC;V2;18;Male;5879_PFC
+1823_BA24;Velmeshev;1823;BA24;15;10-20 years;Male;CC;V2;18;Male;1823_BA24
+5936_PFC;Velmeshev;5936;PFC;14;10-20 years;Female;FC;V2;23;Female;5936_PFC
+5976_BA9;Velmeshev;5976;BA9;4;4-10 years;Female;FC;V2;21;Female;5976_BA9
+5242_FIC;Velmeshev;5242;FIC;15;10-20 years;Male;IC;V2;9;Male;5242_FIC
+5408_FIC;Velmeshev;5408;FIC;6;4-10 years;Male;IC;V2;16;Male;5408_FIC
+5787_BA9;Velmeshev;5787;BA9;39;Adult;Male;FC;V2;16;Male;5787_BA9
+5609_BA9;Velmeshev;5609;BA9;54;Adult;Female;FC;V2;6;Female;5609_BA9
+5546_BA9;Velmeshev;5546;BA9;34;Adult;Female;FC;V2;27;Female;5546_BA9
+5981_BA9;Velmeshev;5981;BA9;44;Adult;Female;FC;V2;19;Female;5981_BA9
+4426_BA9;Velmeshev;4426;BA9;2 years 77 days;2-4 years;Male;FC;V2;34;Male;4426_BA9
+4350_BA9;Velmeshev;4350;BA9;196 days;0-1 years;Male;FC;V2;20;Male;4350_BA9
+4369_BA9;Velmeshev;4369;BA9;2 years 265 days;2-4 years;Female;FC;V2;14;Female;4369_BA9
+A14-103_FC;Velmeshev;A14-103;FC;35 GW+12 d;3rd trimester;Female;FC;V2;18;Female;A14-103_FC
+A15-44_FC;Velmeshev;A15-44;FC;39 GW+1d;3rd trimester;Female;FC;V2;20;Female;A15-44_FC
+4389_BA9;Velmeshev;4389;BA9;79 days;0-1 years;Female;FC;V2;27;Female;4389_BA9
+5608_BA9;Velmeshev;5608;BA9;3 years 194 days;2-4 years;Male;FC;V2;29;Male;5608_BA9
+4396_BA9;Velmeshev;4396;BA9;55 days;0-1 years;Male;FC;V2;15;Male;4396_BA9
+5608_BA24;Velmeshev;5608;BA24;3 years 194 days;2-4 years;Male;CC;V2;29;Male;5608_BA24
+4670_BA24;Velmeshev;4670;BA24;4 years 237 days;4-10 years;Male;CC;V2;17;Male;4670_BA24
+4426_BA24;Velmeshev;4426;BA24;2 years 77 days;2-4 years;Male;CC;V2;34;Male;4426_BA24
+4369_BA24;Velmeshev;4369;BA24;2 years 265 days;2-4 years;Female;CC;V2;14;Female;4369_BA24
+4350_BA24;Velmeshev;4350;BA24;196 days;0-1 years;Male;CC;V2;20;Male;4350_BA24
+1791_BA24;Velmeshev;1791;BA24;2 years 259 days;2-4 years;Female;CC;V2;12;Female;1791_BA24
+1547_BA24;Velmeshev;1547;BA24;1 year 259 days;1-2 years;Male;CC;V2;10;Male;1547_BA24
+1453_BA24;Velmeshev;1453;BA24;1 year 78 days;1-2 years;Male;CC;V2;19;Male;1453_BA24
+A15-44_Cing;Velmeshev;A15-44;Cing;39 GW+1d;3rd trimester;Female;CC;V2;20;Female;A15-44_Cing
+A14-103_Cing;Velmeshev;A14-103;Cing;35 GW+12 d;3rd trimester;Female;CC;V2;18;Female;A15-103_Cing
+5608_INS;Velmeshev;5608;INS;3 years 194 days;2-4 years;Male;IC;V2;29;Male;5608_INS
+4396_INS;Velmeshev;4396;INS;55 days;0-1 years;Male;IC;V2;15;Male;4396_INS
+4369_INS;Velmeshev;4369;INS;2 years 265 days;2-4 years;Female;IC;V2;14;Female;4369_INS
+1798_INS;Velmeshev;1798;INS;1 years 288 days;1-2 years;Female;IC;V2;24;Female;1798_INS
+1798_BA24;Velmeshev;1798;BA24;1 years 288 days;1-2 years;Female;CC;V2;24;Female;1798_BA24
+1798_BA9;Velmeshev;1798;BA9;1 years 288 days;1-2 years;Female;FC;V2;24;Female;1798_BA9
+1453_INS;Velmeshev;1453;INS;1 year 78 days;1-2 years;Male;IC;V2;19;Male;1453_INS
+SM4-C20;Velmeshev;SM4-C20;cortex;GW20;2nd trimester;Unknown;CTX;V2;0;Female;SM4-C20
+SM5-C19;Velmeshev;SM5-C19;cortex;GW19;2nd trimester;Unknown;CTX;V2;0;Male;SM5-C19
+SM6-C19;Velmeshev;SM6-C19;cortex;GW19;2nd trimester;Unknown;CTX;V2;0;Male;SM6-C19
+SM10-C23;Velmeshev;SM10-C23;cortex;GW23;2nd trimester;Unknown;CTX;V2;0;Male;SM10-C23
+SM11-C22;Velmeshev;SM11-C22;cortex;GW22;2nd trimester;Unknown;CTX;V2;0;Female;SM11-C22
+SM12-C20;Velmeshev;SM12-C20;cortex;GW20;2nd trimester;Unknown;CTX;V2;0;Female;SM12-C20
+4396_BA24;Velmeshev;4396;BA24;55 days;0-1 years;Male;CC;V2;15;Male;4396_BA24
+4389_BA24;Velmeshev;4389;BA24;79 days;0-1 years;Female;CC;V2;27;Female;4389_BA24
+5900_BA13;Velmeshev;5900;BA13;GW34;3rd trimester;Unknown;IC;V2;23;Female;5900_BA13
+663_BA22;Velmeshev;663;BA22;GW38+3d;3rd trimester;Unknown;TC;V2;6;Male;663_BA22
+779_BA22;Velmeshev;779;BA22;GW37+5d;3rd trimester;Unknown;TC;V2;5;Male;779_BA22
+4942_BA22;Velmeshev;4942;BA22;GW25+1d;2nd trimester;Unknown;TC;V2;16;Female;4942_BA22
+4942_BA9;Velmeshev;4942;BA9;GW25+1d;2nd trimester;Unknown;FC;V2;16;Female;4942_BA9
+5900_BA24;Velmeshev;5900;BA24;GW34;3rd trimester;Unknown;CC;V2;23;Female;5900_BA24
+872_BA13;Velmeshev;872;BA13;GW28;3rd trimester;Unknown;IC;V2;15;Male;872_BA13
+872_BA22;Velmeshev;872;BA22;GW28;3rd trimester;Unknown;TC;V2;15;Male;872_BA22
+779_BA9;Velmeshev;779;BA9;GW37+5d;3rd trimester;Unknown;FC;V2;5;Male;779_BA9
+4283_BA22;Velmeshev;4283;BA22;GW27+2d;2nd trimester;Unknown;TC;V2;19;Female;4283_BA22
+4283_BA13;Velmeshev;4283;BA13;GW27+2d;2nd trimester;Unknown;IC;V2;19;Female;4283_BA13
+4283_BA9;Velmeshev;4283;BA9;GW27+2d;2nd trimester;Unknown;FC;V2;19;Female;4283_BA9
+4942_BA13;Velmeshev;4942;BA13;GW25+1d;2nd trimester;Unknown;IC;V2;16;Female;4942_BA13
+5900_BA9;Velmeshev;5900;BA9;GW34;3rd trimester;Unknown;FC;V2;23;Female;5900_BA9
+5900_BA22;Velmeshev;5900;BA22;GW34;3rd trimester;Unknown;TC;V2;23;Female;5900_BA22
+GW18-LGE-3-22-17;Velmeshev;GW18-3-22-17;LGE;GW18;2nd trimester;Unknown;LGE;V2;0;Male;GW18-LGE-3-22-17
+GW18-CGE-3-22-17;Velmeshev;GW18-3-22-17;CGE;GW18;2nd trimester;Unknown;CGE;V2;0;Male;GW18-CGE-3-22-17
+GW27-PFC-2-7-18;Velmeshev;GW27-2-7-18;PFC;GW28.5;3rd trimester;Male;FC;V2;24;Male;GW27-PFC-2-7-18
+GW27-cing-2-7-18;Velmeshev;GW27-2-7-18;cing;GW28.5;3rd trimester;Male;CC;V2;24;Male;GW27-cing-2-7-18
+GW27-STG-2-7-18;Velmeshev;GW27-2-7-18;STG;GW28.5;3rd trimester;Male;TC;V2;24;Male;GW27-STG-2-7-18
+GW20-PFC-11-28-18;Velmeshev;GW20-11-28-18;PFC;GW20.5;2nd trimester;Female;FC;V2;20;Female;GW20-PFC-11-28-18
+GW20-cing-11-28-18;Velmeshev;GW20-11-28-18;cing;GW20.5;2nd trimester;Female;CC;V2;20;Female;GW20-cing-11-28-18
+GW20-temp-11-28-18;Velmeshev;GW20-11-28-18;temp;GW20.5;2nd trimester;Female;TC;V2;20;Female;GW20-temp-11-28-18
+GW20-PFC-12-7-18;Velmeshev;GW20-12-7-18;PFC;GW20;2nd trimester;Unknown;FC;V2;0;Female;GW20-PFC-12-7-18
+GW20-ACC-12-7-18;Velmeshev;GW20-12-7-18;ACC;GW20;2nd trimester;Unknown;CC;V2;0;Female;GW20-ACC-12-7-18
+GW25-PFC-11-17-17;Velmeshev;GW25-11-17-17;PFC;GW25;2nd trimester;Unknown;FC;V2;0;Male;GW25-PFC-11-17-17
+GW30-temp-11-6-18;Velmeshev;GW30-11-6-18;temp;GW30;3rd trimester;Female;TC;V2;24;Female;GW30-temp-11-6-18
+GW30-cing-11-6-18;Velmeshev;GW30-11-6-18;cing;GW30;3rd trimester;Female;CC;V2;24;Female;GW30-cing-11-6-18
+GW30-PFC-11-6-18;Velmeshev;GW30-11-6-18;PFC;GW30;3rd trimester;Female;FC;V2;24;Female;GW30-PFC-11-6-18
+1443_BA22;Velmeshev;1443;BA22;0 years 332 days;0-1 years;Female;TC;V2;10;Female;1443_BA22
+4396_BA22;Velmeshev;4396;BA22;55 days;0-1 years;Male;TC;V2;15;Male;4396_BA22
+4670_BA22;Velmeshev;4670;BA22;4 years 237 days;4-10 years;Male;TC;V2;17;Male;4670_BA22
+4332_BA22;Velmeshev;4332;BA22;5 years 243 days;4-10 years;Male;TC;V2;18;Male;4332_BA22
+1864_BA22;Velmeshev;1864;BA22;2 years 179 days;2-4 years;Female;TC;V2;8;Female;1864_BA22
+1738_BA22;Velmeshev;1738;BA22;0 years 92 days;0-1 years;Female;TC;V2;20;Female;1738_BA22
+1791_BA22;Velmeshev;1791;BA22;2 years 259 days;2-4 years;Female;TC;V2;12;Female;1791_BA22
+1158_BA22;Velmeshev;1158;BA22;16 years 67 days;10-20 years;Male;TC;V2;15;Male;1158_BA22
+4369_BA22;Velmeshev;4369;BA22;2 years 265 days;2-4 years;Female;TC;V2;14;Female;4369_BA22
+814_BA22;Velmeshev;814;BA22;1 years 124 days;1-2 years;Male;TC;V2;19;Male;814_BA22
+GW16-2-2-20_PFC;Velmeshev;GW16-2-2-20;PFC;GW16;2nd trimester;Unknown;FC;V2;0;Male;GW16-2-2-20_PFC
+GW16-2-2-20_temp;Velmeshev;GW16-2-2-20;temp;GW16;2nd trimester;Unknown;TC;V2;0;Male;GW16-2-2-20_temp
+GW18-6-14-19_PFC;Velmeshev;GW18-6-14-19;PFC;GW18;2nd trimester;Unknown;FC;V2;0;Male;GW18-6-14-19_PFC
+GW18-6-14-19_temp;Velmeshev;GW18-6-14-19;temp;GW18;2nd trimester;Unknown;TC;V2;0;Male;GW18-6-14-19_temp
+GW18-6-14-19_cing;Velmeshev;GW18-6-14-19;cing;GW18;2nd trimester;Unknown;CC;V2;0;Male;GW18-6-14-19_cing
+GW18-6-14-19_LGE;Velmeshev;GW18-6-14-19;LGE;GW18;2nd trimester;Unknown;LGE;V2;0;Male;GW18-6-14-19_LGE
+GW16-2-12-20_MGE;Velmeshev;GW16-2-12-20;MGE;GW16;2nd trimester;Unknown;MGE;V2;0;Male;GW16-2-12-20_MGE
+GW16-2-12-20_CGE;Velmeshev;GW16-2-12-20;CGE;GW16;2nd trimester;Unknown;CGE;V2;0;Male;GW16-2-12-20_CGE
+GW16-2-12-20_LGE;Velmeshev;GW16-2-12-20;LGE;GW16;2nd trimester;Unknown;LGE;V2;0;Male;GW16-2-12-20_LGE
+GW18-6-14-19_MGE;Velmeshev;GW18-6-14-19;MGE;GW18;2nd trimester;Unknown;MGE;V2;0;Male;GW18-6-14-19_MGE
+GW18-6-14-19_CGE;Velmeshev;GW18-6-14-19;CGE;GW18;2nd trimester;Unknown;CGE;V2;0;Male;GW18-6-14-19_CGE
+GW19-1-17-20_GE;Velmeshev;GW19-1-17-20;GE;GW19;2nd trimester;Unknown;GE;V2;0;Male;GW19-1-17-20_GE
+9C;Ramos;9;Frontoparietal cortex;GW17;2nd trimester;Female;FC;V3;40;Female;NA
+11C;Ramos;11;Frontoparietal cortex;GW20;2nd trimester;Female;FC;V3;24;Female;NA
+24C;Ramos;24;Frontoparietal cortex;GW18;2nd trimester;Male;FC;V3;4;Male;NA
+26C;Ramos;26;Frontoparietal cortex;GW19;2nd trimester;Male;FC;V3;7;Male;NA
+23C;Ramos;23;Frontoparietal cortex;GW24;2nd trimester;Male;FC;V3;12;Male;NA
+30C;Ramos;30;Frontoparietal cortex;GW22;2nd trimester;Male;FC;V3;28;Male;NA
+34C;Ramos;34;Frontoparietal cortex;GW20.5;2nd trimester;Male;FC;V3;24;Male;NA
+56C;Ramos;56;Frontoparietal cortex;GW21;2nd trimester;Female;FC;V3;18;Female;NA
+63C;Ramos;63;Frontoparietal cortex;GW24;2nd trimester;Male;FC;V3;24;Male;NA
+3C;Ramos;3;Frontoparietal cortex;GW25;2nd trimester;Female;FC;V3;24;Female;NA
+62C;Ramos;62;Frontoparietal cortex;GW24;2nd trimester;Male;FC;V3;23;Male;NA
+64C;Ramos;64;Frontoparietal cortex;GW24;2nd trimester;Female;FC;V3;36;Male;NA
+6C;Ramos;6;Frontoparietal cortex;GW41;3rd trimester;Female;FC;V3;48;Female;NA
+10C;Ramos;10;Frontoparietal cortex;GW33;3rd trimester;Male;FC;V3;24;Male;NA
+60C;Ramos;60;Frontoparietal cortex;GW32;3rd trimester;Female;FC;V3;96;Female;NA
+9G;Ramos;9;Frontoparietal cortex;GW17;2nd trimester;Female;FC;V3;40;Female;NA
+11G;Ramos;11;Frontoparietal cortex;GW20;2nd trimester;Female;FC;V3;24;Female;NA
+24G;Ramos;24;Frontoparietal cortex;GW18;2nd trimester;Male;FC;V3;4;Male;NA
+26G;Ramos;26;Frontoparietal cortex;GW19;2nd trimester;Male;FC;V3;7;Male;NA
+23G;Ramos;23;Frontoparietal cortex;GW24;2nd trimester;Male;FC;V3;12;Male;NA
+30G;Ramos;30;Frontoparietal cortex;GW22;2nd trimester;Male;FC;V3;28;Male;NA
+34G;Ramos;34;Frontoparietal cortex;GW20.5;2nd trimester;Male;FC;V3;24;Male;NA
+56G;Ramos;56;Frontoparietal cortex;GW21;2nd trimester;Female;FC;V3;18;Female;NA
+63G;Ramos;63;Frontoparietal cortex;GW24;2nd trimester;Male;FC;V3;24;Male;NA
+3G;Ramos;3;Frontoparietal cortex;GW25;2nd trimester;Female;FC;V3;24;Female;NA
+62G;Ramos;62;Frontoparietal cortex;GW24;2nd trimester;Male;FC;V3;23;Male;NA
+64G;Ramos;64;Frontoparietal cortex;GW24;2nd trimester;Female;FC;V3;36;Male;NA
+6G;Ramos;6;Frontoparietal cortex;GW41;3rd trimester;Female;FC;V3;48;Female;NA
+10G;Ramos;10;Frontoparietal cortex;GW33;3rd trimester;Male;FC;V3;24;Male;NA
+60G;Ramos;60;Frontoparietal cortex;GW32;3rd trimester;Female;FC;V3;96;Female;NA
+2C;Ramos;2;Primary motor cortex;45 years;Adult;Female;MC;V3;12;Female;NA
+20C;Ramos;20;Primary motor cortex;53 years;Adult;Female;MC;V3;23;Male;NA
+31C;Ramos;31;Primary motor cortex;28 years;Adult;Male;MC;V3;6;Male;NA
+RL1612;Herring;RL1612;BA9;34d;0-1 years;Male;FC;V2;5;Male;NA
+RL1613;Herring;RL1613;BA8;2yr (758d);2-4 years;Male;FC;V2;12;Male;NA
+RL1614;Herring;RL1614;BA9;8 yr;4-10 years;Male;FC;V2;16;Male;NA
+RL1777;Herring;RL1777;BA8;2d;0-1 years;Female;FC;V3;26;Female;NA
+RL1786;Herring;RL1786;BA8;2yr (758d);2-4 years;Male;FC;V3;12;Male;NA
+RL2100;Herring;RL2100;BA9;86d;0-1 years;Male;FC;V3;13;Male;NA
+RL2102;Herring;RL2102;BA10;16yr;10-20 years;Female;FC;V3;23;Female;NA
+RL2103;Herring;RL2103;BA9/46;ga22;2nd trimester;Male;FC;V3;5;Male;NA
+RL2104;Herring;RL2104;BA9;118d;0-1 years;Female;FC;V3;21;Female;NA
+RL2105;Herring;RL2105;BA9;1.5yr (627d);2-4 years;Male;FC;V3;25;Male;NA
+RL2106;Herring;RL2106;BA46;6.5yr;4-10 years;Male;FC;V3;16;Male;NA
+RL2107;Herring;RL2107;BA9;ga24;2nd trimester;Male;FC;V3;9;Male;NA
+RL2108;Herring;RL2108;BA9;179d;0-1 years;Male;FC;V3;11;Male;NA
+RL2109;Herring;RL2109;BA46;4yr;4-10 years;Male;FC;V3;25;Male;NA
+RL2110;Herring;RL2110;BA9;10yr;10-20 years;Male;FC;V3;15;Male;NA
+RL2121;Herring;RL2121;BA9;ga34;3rd trimester;Female;FC;V3;23;Female;NA
+RL2122;Herring;RL2122;BA9;301d;0-1 years;Male;FC;V3;18;Male;NA
+RL2123;Herring;RL2123;BA8;20yr;Adult;Female;FC;V3;19;Female;NA
+RL2124;Herring;RL2124;BA9;40yr;Adult;Male;FC;V3;9;Male;NA
+RL2125;Herring;RL2125;BA8;1yr (422d);2-4 years;Female;FC;V3;20;Female;NA
+RL2126;Herring;RL2126;BA9;10yr;10-20 years;Female;FC;V3;22;Female;NA
+RL2127;Herring;RL2127;BA9;12yr;10-20 years;Male;FC;V3;13;Male;NA
+RL2128;Herring;RL2128;BA8;20yr;Adult;Female;FC;V3;17;Female;NA
+RL2129;Herring;RL2129;BA9;3yr;2-4 years;Female;FC;V3;12;Female;NA
+RL2130;Herring;RL2130;BA9;14yr;10-20 years;Female;FC;V3;23;Female;NA
+RL2131;Herring;RL2131;BA8;17yr;10-20 years;Female;FC;V3;12;Female;NA
+RL2132;Herring;RL2132;BA10;25yr;Adult;Female;FC;V3;24;Female;NA
+hft_ctx_w21;Trevino;hft_ctx_w21;cortex;GW23;2nd trimester;Unknown;CTX;multiome (same chemistry as V3);0;Female;NA
