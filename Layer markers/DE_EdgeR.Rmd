@@ -149,7 +149,7 @@ topTags(qlf[[1]], n=10L)
 
 ```{r}
 for (i in 1:ncls){
-  write.csv(qlf[[1]]$table, file=paste0('results/humanDE/degenes_', levels(layer)[i], '.csv'))
+  write.csv(qlf[[i]]$table, file=paste0('results/humanDE/degenes_', levels(layer)[i], '.csv'))
 }
 ```
 
@@ -321,7 +321,7 @@ topTags(qlf[[1]], n=10L)
 
 ```{r}
 for (i in 1:ncls){
-  write.csv(qlf[[1]]$table, file=paste0('results/chimpDE/degenes_', levels(layer)[i], '.csv'))
+  write.csv(qlf[[i]]$table, file=paste0('results/chimpDE/degenes_', levels(layer)[i], '.csv'))
 }
 ```
 
@@ -493,7 +493,7 @@ topTags(qlf[[1]], n=10L)
 
 ```{r}
 for (i in 1:ncls){
-  write.csv(qlf[[1]]$table, file=paste0('results/macaqueDE/degenes_', levels(layer)[i], '.csv'))
+  write.csv(qlf[[i]]$table, file=paste0('results/macaqueDE/degenes_', levels(layer)[i], '.csv'))
 }
 ```
 
