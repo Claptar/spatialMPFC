@@ -11,3 +11,5 @@ figures
 .Rhistory
 .RData
 *.Rproj
+.Rprofile
+renv
