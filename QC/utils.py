@@ -33,8 +33,8 @@ def apply_upper_treshold(adata, column, treshold=None):
     treshold = tresholds[column] if treshold is None else treshold
     tresh_index = adata.obs[column] > treshold
     adata.obs.loc[tresh_index, qc_name] = "False"
-    print(f"Трешхолд равняется : {treshold}")
-    print(f"Всего образцов не прошедших трешхолд: {tresh_index.sum()}")
+    print(f"Threshold : {treshold}")
+    print(f"Spots filtered: {tresh_index.sum()}")
     if tresh_index.sum():
         vc = adata.obs.groupby(qc_name)["label"].value_counts()
         print(vc[vc > 0]["False"])
@@ -61,4 +61,4 @@ def apply_percentile_treshold(adata, column, right_bound=True):
         adata.obs.loc[tresh_index, qc_name] = "False"
         tresh_num += tresh_index.sum()
 
-    print(f"Всего образцов не прошедших трешхолд: {tresh_num}")
+    print(f"Spots filtered: {tresh_num}")
