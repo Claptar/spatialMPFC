@@ -369,6 +369,7 @@ pheatmap::pheatmap(lcpm[topMarkers,], breaks=seq(-2,2,length.out=101),
 Let's filter human samples in expression and annotation dataframes
 
 ```{r}
+annotation
 ann <- annotation[annotation$condition == 'macaque',]
 head(ann)
 ```
