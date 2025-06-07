@@ -1,0 +1,183 @@
+---
+title: "DE with EdgeR"
+output: html_notebook
+---
+
+```{r}
+library(edgeR)
+library(ggplot2)
+```
+
+```{r}
+expression <- read.csv('results/celltype_expression.csv', header=TRUE, row.names=1)
+head(expression)
+```
+
+```{r}
+annotation <- read.csv("results/celltype_annotation.csv", header=TRUE, row.names=1)
+#annotation <- annotation[row.names(expression),]
+head(annotation)
+```
+
+## Prepare the data
+
+Factor the data
+
+```{r}
+annotation$roi <- factor(annotation$roi)
+annotation$cell_type <- factor(annotation$cell_type)
+head(annotation)
+```
+
+```{r}
+y <- DGEList(counts=expression, samples=annotation)
+y
+```
+
+### Filtering and normalization
+
+Let's check a summary table
+
+```{r}
+summary(annotation)
+```
+
+Now filter out low expressed genes
+
+```{r}
+keep.genes <- filterByExpr(y, group=y$samples$cell_type, min.count=0.01, min.total.count=1)
+table(keep.genes)
+```
+
+```{r}
+y <- y[keep.genes, , keep=FALSE]
+```
+
+TMM normalization
+
+```{r}
+y <- normLibSizes(y)
+head(y$samples, n=10L)
+```
+
+```{r}
+summary(y$samples$norm.factors)
+```
+
+### Data exploration
+
+```{r}
+y$samples
+```
+
+```{r}
+cell_type <- as.factor(y$samples$cell_type)
+plotMDS(y, col=cell_type, pch=1)
+legend("bottomleft", legend=levels(cell_type), pch=1, col=c(2:18), cex=0.8, ncol=2)
+```
+
+### Design matrix
+
+```{r}
+cell_type <- as.factor(y$samples$cell_type)
+roi <- as.factor(y$samples$roi)
+
+design <- model.matrix(~ 0 + cell_type + roi)
+colnames(design) <- gsub("roi", "", colnames(design))
+colnames(design) <- gsub("cell_type", "", colnames(design))
+head(design)
+```
+
+### Dispersion estimation
+
+```{r}
+y <- estimateDisp(y, design, robust=TRUE)
+y$common.dispersion
+```
+
+```{r}
+plotBCV(y)
+```
+
+```{r}
+fit <- glmQLFit(y, design, robust=TRUE, legacy=FALSE)
+plotQLDisp(fit)
+```
+
+### Marker genes identification
+
+Make a contrast matrix
+
+```{r}
+ncls <- nlevels(cell_type)
+contr <- rbind( matrix(1 / (1 - ncls), ncls, ncls),
+                matrix(0, ncol(design) - ncls, ncls)
+              )
+diag(contr) <- 1
+rownames(contr) <- colnames(design)
+colnames(contr) <- levels(cell_type)
+contr
+```
+
+Perform quasi-likelihood F-test
+
+```{r}
+qlf <- list()
+for (i in 1:ncls){
+  qlf[[i]] <- glmQLFTest(fit, contrast=contr[,i])
+  qlf[[i]]$comparison <- paste0(levels(cell_type)[i], '_vs_others')
+}
+```
+
+The top most significant DE genes for cell_type L1
+
+```{r}
+topTags(qlf[[1]], n=10L)
+```
+
+```{r}
+for (i in 1:ncls){
+  write.csv(topTags(qlf[[i]], n = Inf)$table, file=paste0('results/DE/degenes_', gsub('/', '.', levels(cell_type)[i]), '.csv'))
+}
+```
+
+The numbers of DE genes under each comparison
+
+```{r}
+dt <- lapply(lapply(qlf, decideTestsDGE), summary)
+dt.all <- do.call("cbind", dt)
+dt.all
+```
+
+Let's make a nice heatmap
+
+```{r}
+top <- 20
+topMarkers <- list()
+for (i in 1:ncls) {
+  ord <- order(qlf[[i]]$table$PValue, decreasing=FALSE)
+  up <- qlf[[i]]$table$logFC[ord] > 0
+  topMarkers[[i]] <- rownames(y)[ord[up][1:top]]
+}
+
+topMarkers <- unique(unlist(topMarkers))
+topMarkers
+```
+
+```{r}
+lcpm <- cpm(y, log=TRUE)
+annot <- data.frame(cell_type)
+rownames(annot) <- colnames(y)
+ann_colors <- list(cell_type=2:18)
+names(ann_colors$cell_type) <- levels(cell_type)
+pheatmap::pheatmap(lcpm[topMarkers,], breaks=seq(-2,2,length.out=101),
+                   color=colorRampPalette(c("blue", "white", "red"))(100), scale="row",
+                   ckuster_cols=TRUE, border_color="NA", fontsize_row=5,
+                   treeheight_row=70, treeheight_col=70, cuttree_cols=7,
+                   cell_typeing_method="ward.D2", show_colnames=FALSE,
+                   annotation_col=annot, annotation_colors=ann_colors)
+```
+
+```{r}
+sessionInfo()
+```

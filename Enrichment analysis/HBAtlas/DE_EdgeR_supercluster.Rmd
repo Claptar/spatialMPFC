@@ -1,0 +1,183 @@
+---
+title: "DE with EdgeR"
+output: html_notebook
+---
+
+```{r}
+library(edgeR)
+library(ggplot2)
+```
+
+```{r}
+expression <- read.csv('results/supercluster_expression.csv', header=TRUE, row.names=1)
+head(expression)
+```
+
+```{r}
+annotation <- read.csv("results/supercluster_annotation.csv", header=TRUE, row.names=1)
+#annotation <- annotation[row.names(expression),]
+head(annotation)
+```
+
+## Prepare the data
+
+Factor the data
+
+```{r}
+annotation$roi <- factor(annotation$roi)
+annotation$supercluster_term <- factor(annotation$supercluster_term)
+head(annotation)
+```
+
+```{r}
+y <- DGEList(counts=expression, samples=annotation)
+y
+```
+
+### Filtering and normalization
+
+Let's check a summary table
+
+```{r}
+summary(annotation)
+```
+
+Now filter out low expressed genes
+
+```{r}
+keep.genes <- filterByExpr(y, group=y$samples$supercluster_term, min.count=0.01, min.total.count=1)
+table(keep.genes)
+```
+
+```{r}
+y <- y[keep.genes, , keep=FALSE]
+```
+
+TMM normalization
+
+```{r}
+y <- normLibSizes(y)
+head(y$samples, n=10L)
+```
+
+```{r}
+summary(y$samples$norm.factors)
+```
+
+### Data exploration
+
+```{r}
+y$samples
+```
+
+```{r}
+supercluster_term <- as.factor(y$samples$supercluster_term)
+plotMDS(y, col=supercluster_term, pch=1)
+legend("bottomleft", legend=levels(supercluster_term), pch=1, col=c(2:18), cex=0.8, ncol=2)
+```
+
+### Design matrix
+
+```{r}
+supercluster_term <- as.factor(y$samples$supercluster_term)
+roi <- as.factor(y$samples$roi)
+
+design <- model.matrix(~ 0 + supercluster_term + roi)
+colnames(design) <- gsub("roi", "", colnames(design))
+colnames(design) <- gsub("supercluster_term", "", colnames(design))
+head(design)
+```
+
+### Dispersion estimation
+
+```{r}
+y <- estimateDisp(y, design, robust=TRUE)
+y$common.dispersion
+```
+
+```{r}
+plotBCV(y)
+```
+
+```{r}
+fit <- glmQLFit(y, design, robust=TRUE, legacy=FALSE)
+plotQLDisp(fit)
+```
+
+### Marker genes identification
+
+Make a contrast matrix
+
+```{r}
+ncls <- nlevels(supercluster_term)
+contr <- rbind( matrix(1 / (1 - ncls), ncls, ncls),
+                matrix(0, ncol(design) - ncls, ncls)
+              )
+diag(contr) <- 1
+rownames(contr) <- colnames(design)
+colnames(contr) <- levels(supercluster_term)
+contr
+```
+
+Perform quasi-likelihood F-test
+
+```{r}
+qlf <- list()
+for (i in 1:ncls){
+  qlf[[i]] <- glmQLFTest(fit, contrast=contr[,i])
+  qlf[[i]]$comparison <- paste0(levels(supercluster_term)[i], '_vs_others')
+}
+```
+
+The top most significant DE genes for supercluster_term L1
+
+```{r}
+topTags(qlf[[1]], n=10L)
+```
+
+```{r}
+for (i in 1:ncls){
+  write.csv(topTags(qlf[[i]], n = Inf)$table, file=paste0('results/DE_sup/degenes_', gsub('/', '.', levels(supercluster_term)[i]), '.csv'))
+}
+```
+
+The numbers of DE genes under each comparison
+
+```{r}
+dt <- lapply(lapply(qlf, decideTestsDGE), summary)
+dt.all <- do.call("cbind", dt)
+dt.all
+```
+
+Let's make a nice heatmap
+
+```{r}
+top <- 20
+topMarkers <- list()
+for (i in 1:ncls) {
+  ord <- order(qlf[[i]]$table$PValue, decreasing=FALSE)
+  up <- qlf[[i]]$table$logFC[ord] > 0
+  topMarkers[[i]] <- rownames(y)[ord[up][1:top]]
+}
+
+topMarkers <- unique(unlist(topMarkers))
+topMarkers
+```
+
+```{r}
+lcpm <- cpm(y, log=TRUE)
+annot <- data.frame(supercluster_term)
+rownames(annot) <- colnames(y)
+ann_colors <- list(supercluster_term=2:18)
+names(ann_colors$supercluster_term) <- levels(supercluster_term)
+pheatmap::pheatmap(lcpm[topMarkers,], breaks=seq(-2,2,length.out=101),
+                   color=colorRampPalette(c("blue", "white", "red"))(100), scale="row",
+                   ckuster_cols=TRUE, border_color="NA", fontsize_row=5,
+                   treeheight_row=70, treeheight_col=70, cuttree_cols=7,
+                   supercluster_terming_method="ward.D2", show_colnames=FALSE,
+                   annotation_col=annot, annotation_colors=ann_colors)
+```
+
+```{r}
+sessionInfo()
+```
