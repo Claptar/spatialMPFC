@@ -1,3 +1,4 @@
+import scipy
 import itertools
 import numpy as np
 import pandas as pd
@@ -125,3 +126,22 @@ def rank_degenes(de_results, adata, marker_df, logfc=1.5, pct=0.3):
         )
         ranked_genes[layer] = filtered_markers
     return ranked_genes
+
+
+def corr_df(target_de, ref_de, markers, ref_ind="r", tar_ind="i"):
+    """
+    Calculate correlation between DE genes in target and reference datasets
+    """
+    corr_dict = dict()
+    same_genes = ref_de["L1"].index.intersection(target_de["L1"].index)
+    for layer_ref in layers:
+        layer_dict = dict()
+        mark = list(markers[layer_ref].intersection(same_genes))
+        ref_genes = ref_de[layer_ref].loc[mark]
+        for layer_tar in layers:
+            target_genes = target_de[layer_tar].loc[mark]
+            corr = scipy.stats.pearsonr(x=ref_genes.logFC, y=target_genes.logFC)
+            layer_dict[layer_tar + f"{tar_ind}"] = corr[0]
+            # print(f'{layer_ref}_ref vs {layer_tar}_tar = {corr[0]}')
+        corr_dict[layer_ref + f"{ref_ind}"] = layer_dict
+    return pd.DataFrame(corr_dict)
