@@ -33,6 +33,7 @@ RUN . "${VENV_PATH}/bin/activate" && \
 RUN R -e "install.packages('BiocManager', repos='https://cran.rstudio.com/')" && \
     R -e "BiocManager::install('edgeR', ask = FALSE, update = FALSE)" && \
     R -e "install.packages('IRkernel', repos='https://cran.rstudio.com/')" && \
+    R -e "install.packages('pheatmap', repos='https://cran.rstudio.com/')" && \
     R -e "IRkernel::installspec(user = FALSE)"
 
 
