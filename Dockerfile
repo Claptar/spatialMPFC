@@ -26,7 +26,7 @@ RUN uv venv "${VENV_PATH}"
 # 4. Install all required Python packages with uv
 RUN . "${VENV_PATH}/bin/activate" && \
     uv pip install scanpy squidpy tqdm jupyter gseapy decoupler \
-    plotly seaborn ipywidgets notebook papermill
+    plotly seaborn ipywidgets notebook papermill kaleido
 
 
 # 5. Add missing R & Bioconductor pieces, then register R with Jupyter
