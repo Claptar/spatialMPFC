@@ -6,6 +6,13 @@ import pandas as pd
 from pandas.api.types import CategoricalDtype
 from matplotlib import rcdefaults
 
+color_discrete_map = {
+    "No significance": "darkblue",
+    "p < 0.05": "purple",
+    "p < 0.01": "darkorange",
+    "p < 0.001": "yellow",
+}
+
 
 def p_val_group(value):
     """
@@ -127,9 +134,9 @@ class GeneCluster:
 def scatter_enrichment(
     enrich_res: pd.DataFrame,
     terms: list,
-    color_discrete_map: dict,
     db_name: str,
     *,
+    color_discrete_map: dict = color_discrete_map,
     pval_groups=("No significance", "p < 0.05", "p < 0.01", "p < 0.001"),
     figsize=(7, 13),
     dpi=100,

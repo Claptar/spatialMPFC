@@ -10,7 +10,13 @@ from matplotlib import ticker
 
 
 def apply_filter(
-    adata, value_columns, sample_column, method="median", size=3, key="_filtered"
+    adata,
+    value_columns,
+    sample_column,
+    method="median",
+    size=3,
+    key="_filtered",
+    new_columns=None,
 ):
     """
     Apply a spatial filter to the specified value columns in an AnnData object.
@@ -84,7 +90,8 @@ def apply_filter(
 
     # concat data
     filtered_df = pd.concat(results, axis=0)
-    adata.obs[filtered_df.columns] = filtered_df
+    new_columns = filtered_df.columns if new_columns is None else new_columns
+    adata.obs[new_columns] = filtered_df
 
 
 def plot_cluster_heatmap(
