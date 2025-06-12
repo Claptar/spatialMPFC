@@ -33,13 +33,13 @@ The spatial organization of mammalian brain sections is closely tied to their fu
 ## Directory Structure
 
 ```text
-├── data/                 # raw and processed spatial transcriptomics datasets  
-├── docker/               # Jupyter notebooks for QC, exploration, and plotting  
-├── enrichment_analysis/  # custom analysis scripts and utilities  
-├── preprocess/           # generated tables, reports, and summaries  
-├── QC/                   # final figures and previews for the thesis  
-├── tf_activity/          # Conda and Docker environment specifications  
-└── validate_layers/      # additional design docs and notes  
+├── data/                 # raw and processed data
+├── docker/               # Dockerfile and environment specifications 
+├── enrichment_analysis/  # cell-type enrichment analysis
+├── preprocess/           # data processing notebooks
+├── QC/                   # quality control notebooks
+├── tf_activity/          # transcription factor activity analysis 
+└── validate_layers/      # layer segmentation validation  
 ```
 
 ---
