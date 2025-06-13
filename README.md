@@ -38,7 +38,8 @@ The spatial organization of mammalian brain sections is closely tied to their fu
 ├── enrichment_analysis/  # cell-type enrichment analysis
 ├── preprocess/           # data processing notebooks
 ├── QC/                   # quality control notebooks
-├── tf_activity/          # transcription factor activity analysis 
+├── tf_activity/          # transcription factor activity analysis
+├── utils/                # python package with helper functions
 └── validate_layers/      # layer segmentation validation  
 ```
 
